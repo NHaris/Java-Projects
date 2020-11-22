@@ -1,4 +1,4 @@
-//WordGUI
+//WordGUI for PROJECT 1
 import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
