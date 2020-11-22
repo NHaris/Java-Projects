@@ -1,3 +1,4 @@
+//WordGUI
 import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -9,46 +10,41 @@ public class WordGUI extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	JTextArea centralArea; // words are present here
-	JTextArea Areavalid; // valid words are present here
-	JTextArea invalidArea; // invalid words are present here
+	JTextArea UnsortedWords; // words are present here
+	JTextArea SortedWords; // valid words are present here
 
 	public WordGUI() {
 		this.setSize(500, 500);
-		this.setTitle("Project 1");
+		this.setTitle("Project 2");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		this.setLayout(new GridLayout(1, 3)); // grid layout
 
-		centralArea = new JTextArea();
-		Areavalid = new JTextArea();
-		invalidArea = new JTextArea();
+		UnsortedWords = new JTextArea();
+		SortedWords = new JTextArea();
 
 		JScrollPane scrollFirstPane = new JScrollPane();
 		JScrollPane scrollSecondPane = new JScrollPane();
-		JScrollPane scrollThirdPane = new JScrollPane();
 
-		scrollFirstPane.setViewportView(centralArea);
-		scrollSecondPane.setViewportView(Areavalid);
-		scrollThirdPane.setViewportView(invalidArea);
+		scrollFirstPane.setViewportView(UnsortedWords);
+		scrollSecondPane.setViewportView(SortedWords);
 
 		this.add(scrollFirstPane);
 		this.add(scrollSecondPane);
-		this.add(scrollThirdPane);
 
 		this.setVisible(true);
 	}
 
+	public WordGUI(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void addtoMasterArea(String str) {
-		centralArea.append(str);
+		UnsortedWords.append(str);
 	}
 
 	public void addtoValidArea(String str) {
-		Areavalid.append(str);
-	}
-
-	public void addtoInvalidArea(String str) {
-		invalidArea.append(str);
+		SortedWords.append(str);
 	}
 
 }
