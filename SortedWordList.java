@@ -29,7 +29,7 @@ public class SortedWordList extends WordList {
 		if (node.next == null) {
 			// set that is as last node
 			last = node;
-			// increment the node
+			// increment the node.
 			size_of_list++;
 		}
 	}
